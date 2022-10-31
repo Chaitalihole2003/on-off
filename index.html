@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascr</title>
+        <script>
+            function bulbon()
+            {
+                document.getElementById("bulb").src=" bulbon.png";
+                document.getElementById("btn1").className= " btn btn1";
+                document.getElementById("btn2").className="btn";
+
+                document.querySelector(".card").className="card card-light"
+
+            }
+            function bulboff()
+            {
+                document.getElementById("bulb").src="  bulboff.png";
+                document.getElementById("btn2").className= " btn btn2";
+                document.getElementById("btn1").className="btn";
+
+                document.querySelector(".card").className="card card-dark"
+
+
+
+
+            }
+        </script>
+        <style>
+       .card{
+        height: 220px;
+        width:150px;
+        border:  5px double gray;
+        display: block;
+        margin: auto;
+        align-items: center;
+        background-color: pink;
+       }
+       .card:hover{
+        background-color: gray;
+       }
+       .buld-img{
+        display: block;
+        margin: auto;
+        align-items: center;
+                
+        
+       }
+       .btn-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        margin-top: 10px;
+       }
+       .btn{
+        border: 6px solid black;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+       }
+       .btn1{
+        background-color: green;
+        border: 1px solid white;
+        border-radius: 20px;
+        font-size: 15px;
+        color: white;
+        padding: 5px;
+        width: 50px;
+        border-radius: 40%;
+       }
+       .btn1:hover{
+        background-color: rgb(29, 53, 45);
+       }
+       .btn2{
+        background-color: red;
+        border: 1px solid white;
+        border-radius: 20px;
+        font-size: 15px;
+        padding: 5px;
+        color: white;
+        width: 50px;
+        border-radius: 40%;
+       }
+       .btn2:hover{
+        background-color: orange;
+       }
+       .card-dark{
+        background-color: gray;
+       }
+       .card-light{
+        background-color: #ffffff;
+       }
+
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <img src="bulboff.png" class="bulb-img" id="bulb">
+            <div class="btn-container">
+                <button class="btn1" onclick="bulbon()">on</button>
+                <button class="btn2" onclick="bulboff()">off</button>
+
+            </div>
+        </div>
+    </body>
+</html>
